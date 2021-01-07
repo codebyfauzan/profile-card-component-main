@@ -7,10 +7,36 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.bg-top, .bg-bottom {
-    width: 400px;
+.bg-top {
+    width: 70vw;
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    z-index: -1;
+}
+
+.bg-bottom {
+    width: 70vw;
+    position: absolute;
+    bottom: -50%;
+    right: -20%;
+    z-index: -5;
+}
+
+@media only screen and (max-width: 375px) {
+    .bg-top {
+      top: -20%;
+      left: -10%;
+    }
+
+    .bg-bottom {
+      bottom: -20%;
+      right: -10%;
+    }
 }
 
 .profile-card {
@@ -20,6 +46,7 @@ body {
     margin: auto;
     position: relative;
     border-radius: 20px;
+    box-shadow: 0 15px 80px 20px rgba(0, 0, 0, 0.151);
 }
 
 .profile-card img {
@@ -58,6 +85,7 @@ body {
 
 .profile-card span {
     color: hsl(0, 0%, 59%);
+    font-weight: 400;
 }
 
 .profile-info p {
