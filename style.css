@@ -34,7 +34,9 @@ body {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 87px;
+    top: 87px; /* 140 - (106 / 2) */
+    /* 140 is the height of bg-pattern-card */
+    /* 106 is the height of profile image with border */
 }
 
 .profile-info img {
